@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa; /* Cor de fundo clara para simular ambiente limpo */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de container com tema de supermercado */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px; /* Bordas arredondadas que lembram etiquetas de preços */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 450px;
+    text-align: center;
+    border: 3px solid #ffeb3b; /* Cor de borda que remete a destaque de promoções */
+    background-image: url('supermarket-background.png'); /* Opcional: imagem de fundo sutil, como uma prateleira */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Ícone de carrinho de compras */
+.icon {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #2e7d32; /* Cor verde que lembra plantas e frescor */
+    font-family: 'Impact', sans-serif; /* Estilo de fonte mais 'bold', similar a etiquetas de preços */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+    background-color: #fffde7; /* Cor clara, como páginas de cupons */
+}
+
+input:focus {
+    border-color: #ffeb3b; /* Destaque amarelo ao focar */
+    outline: none;
+}
+
+input.invalid {
+    border-color: red;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    height: 20px;
+    display: block;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ffeb3b; /* Cor que remete a promoções e etiquetas de desconto */
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #fbc02d;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+    padding: 0;
+}
+
+li {
+    background-color: #f1f8e9;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeIn 0.5s forwards;
+    border-left: 5px solid #2e7d32; /* Verde, como as cores das seções de alimentos frescos */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delete-btn {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+}

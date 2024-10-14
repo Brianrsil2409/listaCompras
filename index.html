@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="src/assets/css/lista.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Compras</h1>
+        <form id="item-form">
+            <input type="text" id="item-input" placeholder="Adicionar item..." aria-label="Adicionar item">
+            <span id="error-message" class="error-message"></span>
+            <button type="submit" class="add-btn">Adicionar</button>
+        </form>
+        <ul id="item-list"></ul>
+    </div>
+    
+    <!-- Ordem de inclusão correta dos scripts -->
+    <script src="src/assets/js/app.js"></script>  <!-- Funções globais -->
+    <script src="src/assets/js/main.js"></script> <!-- Manipulação do DOM -->
+    <script src="src/assets/js/script.js"></script> <!-- Manuseio de eventos -->
+</body>
+</html>
